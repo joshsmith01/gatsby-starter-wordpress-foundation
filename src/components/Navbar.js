@@ -37,6 +37,7 @@ const Navbar = () => (
                 {edge.node.title}
               </Link>
             ))}
+            <Link to='kitchen-sink'>Kitchen Sink</Link>
           </div>
           <div className="navbar-end">
             <a
