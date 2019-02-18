@@ -5,6 +5,10 @@ import Card from '../components/containers/Card'
 import Callout from '../components/containers/Callout'
 import Heading from '../components/typography/Heading'
 import Badge from '../components/cues/Badge'
+import Breadcrumbs from '../components/cues/Breadcrumbs'
+import Button from '../components/controls/Button'
+import ButtonGroup from '../components/controls/ButtonGroup'
+import CloseButton from '../components/controls/CloseButton'
 
 const KitchenSink = () => (
   <Layout>
@@ -16,9 +20,6 @@ const KitchenSink = () => (
         </div>
         <div className="cell small-12">
           <hr />
-          <button type="button" className="success button">
-            Save
-          </button>
         </div>
         <div className="cell small-12 medium-6">
           <Heading tag={2}>Callout</Heading>
@@ -101,10 +102,88 @@ const KitchenSink = () => (
           <Badge type="warning">A</Badge>
           <Badge type="alert">B</Badge>
         </div>
-
       </div>
 
 
+      <hr />
+      <Heading tag={2}>Breadcrumbs</Heading>
+      <div className="grid-x grid-margin-x">
+        <div className="cell small-12 medium-4">
+          <Breadcrumbs />
+        </div>
+      </div>
+
+      <hr />
+      <Heading tag={2}>Button</Heading>
+      <div className="grid-x grid-margin-x">
+        <div className="cell small-12 ">
+          <Button>
+            Learn More
+          </Button>
+
+          <Button>
+            View All Features
+          </Button>
+
+          <Button type='success'>
+            Save
+          </Button>
+          <Button type='alert'>
+            Delete
+          </Button>
+          <Button type='tiny'>
+            So Tiny
+          </Button>
+          <Button type='small'>
+            So Small
+          </Button>
+          <Button type='large'>
+            So Large
+          </Button>
+          <Button type='warning'>
+            Warning
+          </Button>
+          <Button type='expanded'>
+            Such Expanse
+          </Button>
+        </div>
+      </div>
+
+      <hr />
+      <Heading tag={2}>Button Group</Heading>
+      <ButtonGroup>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup type='small'>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup type='secondary'>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup type='expanded '>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup type='expanded secondary'>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+
+      <hr />
+      <Heading tag={2}>Close Button</Heading>
+      <div className="callout" data-closable>
+        <p>You can so totally close this!</p>
+
+        <CloseButton tag='button' ariaLabel='Dismiss alert' type='button'><span aria-hidden="true">&times;</span></CloseButton>
+      </div>
     </div>
   </Layout>
 )

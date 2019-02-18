@@ -55,3 +55,9 @@
 // @include foundation-flex-classes;
 @include foundation-visibility-classes;
 // @include foundation-prototype-classes;
+
+
+// Add the space back to the inline-block elements that Gatsby removes.
+.button, .badge {
+  margin-right: 4px;
+}
