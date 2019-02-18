@@ -1,14 +1,14 @@
 import React from 'react'
 
 const Heading = ({
-                   tag = 2,
-                   text,
-                   className = 'headline'
+  tag = 2,
+  children,
+  type = 'headline'
                  }) => {
   const Tag = tag > 6 ? 'h6' : `h${tag}`;
   return (
-    <Tag className={`heading-${className}`}>
-      {text}
+    <Tag className={`${type}`}>
+      {children}
     </Tag>
   )
 

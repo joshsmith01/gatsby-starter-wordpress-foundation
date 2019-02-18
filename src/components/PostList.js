@@ -36,7 +36,7 @@ export default class IndexPage extends React.Component {
                     __html: post.excerpt.replace(/<p class="link-more.*/, ''),
                   }}
                 />
-                <Link className="button " to={post.slug}>
+                <Link className="button" to={post.slug}>
                   Keep Reading →
                 </Link>
               </div>

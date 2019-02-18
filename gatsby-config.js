@@ -1,10 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + WordPress Starter',
+    title: 'Gatsby + Foundation + WordPress Starter',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['src/components/all.scss'],
+      },
+    },
     {
       resolve: 'gatsby-source-wordpress',
       options: {
